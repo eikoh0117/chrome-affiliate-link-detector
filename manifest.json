@@ -3,7 +3,7 @@
 	"author": "Hidemitsu Aoki",
 	"homepage_url": "https://github.com/eikoh0117/chrome-affiliate-link-detector",
 	"name": "affiliate-link-detector",
-	"description": "This make it possible to recognize affiliate links on websites",
+	"description": "You can recognize affiliate links on websites",
 	"version": "1.0.0",
 	"icons": {
 		"32": "icon_32.png",
@@ -19,7 +19,7 @@
 	},
 	"browser_action": {
 		"default_icon": "icon_32.png",
-		"default_title": ""
+		"default_title": "affiliate-link-detector"
 	},
 	"permissions": [
 		"tabs",
