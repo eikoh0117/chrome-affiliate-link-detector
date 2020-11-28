@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"author": "Hidemitsu Aoki",
-	"homepage_url": "http://example.com",
+	"homepage_url": "https://github.com/eikoh0117/chrome-affiliate-link-detector",
 	"name": "affiliate-link-detector",
 	"description": "This make it possible to recognize affiliate links on websites",
 	"version": "1.0.0",
