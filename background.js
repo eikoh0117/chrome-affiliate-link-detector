@@ -3,9 +3,11 @@ chrome.tabs.onUpdated.addListener((tabId, info, tab) => {
 })
 
 chrome.tabs.onActivated.addListener(activeInfo => {
-  tabId = activeInfo.tabId.toString()
-  chrome.storage.local.get(tabId, result => {
-    let linkLength = Object.values(result).toString()
-    chrome.browserAction.setBadgeText({ text: linkLength })
+  tabId = activeInfo.tabId
+  chrome.storage.local.get(tabId.toString(), result => {
+		let linkLength = Object.values(result).toString()
+		if (linkLength !== "0") {
+			chrome.browserAction.setBadgeText({ text: linkLength, tabId: tabId})
+		}
   })
 })
