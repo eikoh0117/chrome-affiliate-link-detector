@@ -31,7 +31,7 @@ const detectAffiliateLinks = () => {
     elem.style.padding = "1px"
   })
 
-  const linkLength = targetElements.length.toString()
+  const linkLength = aElements.length.toString()
 
   return linkLength
 }
