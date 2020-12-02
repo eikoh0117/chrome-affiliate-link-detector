@@ -1,16 +1,17 @@
 const detectAffiliateLinks = () => {
   const targetLinks = {
     moshimo: "af.moshimo.com/af/c/click?a_id=",
-		a8: "px.a8.net/svt/",
-		felmat: "t.felmat.net/fmcl?",
-		valueCommercem: "referral?sid=",
-		afb: "t.afi-b.com/visit.php?guid="
+    a8: "px.a8.net/svt/",
+    felmat: "t.felmat.net/fmcl?",
+    valueCommercem: "referral?sid=",
+    afb: "t.afi-b.com/visit.php?guid=",
+    accessTrade: "h.accesstrade.net/"
   }
   const aAllelements = document.querySelectorAll("a")
   const aElements = []
   Object.values(aAllelements).forEach(elem => {
     Object.values(targetLinks).forEach(link => {
-			elem.href.indexOf(link) !== -1 ? aElements.push(elem) : ""
+      elem.href.indexOf(link) !== -1 ? aElements.push(elem) : ""
     })
   })
   const aElementsChildren = aElements.map(elem => elem.children)
@@ -25,13 +26,21 @@ const detectAffiliateLinks = () => {
   const targetElements = aElements.concat(imgElements)
   targetElements.forEach(elem => {
     elem.style.border = "solid 3px"
-		elem.style.borderColor = "#ff0000"
-		elem.style.padding = "1px"
+    elem.style.borderColor = "#ff0000"
+    elem.style.padding = "1px"
   })
+
+  const linkLength = targetElements.length.toString()
+
+  return linkLength
 }
 
 chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
-  if (request == "Action") {
-    detectAffiliateLinks()
+  if (request.message == "onUpdate") {
+    const linkLength = detectAffiliateLinks()
+    const tabId = request.tabId.toString()
+
+    chrome.storage.local.set({ [tabId]: linkLength })
   }
+  return true
 })

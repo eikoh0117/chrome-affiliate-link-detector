@@ -24,6 +24,8 @@
 	"permissions": [
 		"tabs",
 		"background",
+		"storage",
+		"declarativeContent",
 		"http://*/*",
 		"https://*/*"
 	]
