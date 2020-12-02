@@ -5,7 +5,8 @@ const detectAffiliateLinks = () => {
     felmat: "t.felmat.net/fmcl?",
     valueCommercem: "referral?sid=",
     afb: "t.afi-b.com/visit.php?guid=",
-    accessTrade: "h.accesstrade.net/"
+		accessTrade: "h.accesstrade.net/",
+		tcs: "tcs-asp.net/alink?"
   }
   const aAllelements = document.querySelectorAll("a")
   const aElements = []
