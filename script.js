@@ -39,11 +39,11 @@ const detectAffiliateLinks = () => {
 }
 
 chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.message == "onUpdate") {
-    const linkLength = detectAffiliateLinks()
+	if (request.message == "onUpdate") {
+		const linkLength = detectAffiliateLinks()
     const tabId = request.tabId.toString()
-
-    chrome.storage.local.set({ [tabId]: linkLength })
+		chrome.storage.local.set({ [tabId]: linkLength })
+		sendResponse({ length: linkLength })
   }
-  return true
+	return true
 })

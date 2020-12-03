@@ -1,5 +1,12 @@
-chrome.tabs.onUpdated.addListener((tabId, info, tab) => {
-  chrome.tabs.sendMessage(tabId, { message: "onUpdate", tabId: tab.id })
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+	if (changeInfo.status === "complete") {
+		chrome.tabs.sendMessage(tabId, { message: "onUpdate", tabId: tab.id }, (response) => {
+				const linkLength = response['length']
+				if (linkLength !== "0") {
+					chrome.browserAction.setBadgeText({ text: linkLength, tabId: tabId})
+				}
+			})
+	}
 })
 
 chrome.tabs.onActivated.addListener(activeInfo => {
