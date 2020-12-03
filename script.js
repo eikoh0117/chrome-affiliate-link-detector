@@ -8,7 +8,8 @@ const detectAffiliateLinks = () => {
 		accessTrade: "h.accesstrade.net/",
 		tcs: "tcs-asp.net/alink?",
 		presco: "ad.presco.asia/cl/?b_id=",
-		linkA: "link-a.net/gate.php?guid="
+		linkA: "link-a.net/gate.php?guid=",
+		affiTown: "ad.atown.jp/cp?sid="
   }
   const aAllelements = document.querySelectorAll("a")
   const aElements = []
@@ -28,9 +29,10 @@ const detectAffiliateLinks = () => {
   })
   const targetElements = aElements.concat(imgElements)
   targetElements.forEach(elem => {
-    elem.style.border = "solid 3px"
+    elem.style.border = "solid 2px"
     elem.style.borderColor = "#ff0000"
     elem.style.padding = "1px"
+    elem.style.borderRadius = "5px"
   })
 
   const linkLength = aElements.length.toString()
