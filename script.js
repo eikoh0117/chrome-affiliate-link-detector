@@ -5,11 +5,12 @@ const detectAffiliateLinks = () => {
     felmat: "t.felmat.net/fmcl?",
     valueCommercem: "referral?sid=",
     afb: "t.afi-b.com",
-		accessTrade: "h.accesstrade.net/",
-		tcs: "tcs-asp.net/alink?",
-		presco: "ad.presco.asia/cl/?b_id=",
-		linkA: "link-a.net/gate.php?guid=",
-		affiTown: "ad.atown.jp/cp?sid="
+    accessTrade: "h.accesstrade.net/",
+    tcs: "tcs-asp.net/alink?",
+    presco: "ad.presco.asia/cl/?b_id=",
+    linkA: "link-a.net/gate.php?guid=",
+    affiTown: "ad.atown.jp/cp?sid=",
+    doubleClick: "adclick.g.doubleclick.net/"
   }
   const aAllelements = document.querySelectorAll("a")
   const aElements = []
