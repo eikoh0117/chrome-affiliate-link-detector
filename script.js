@@ -16,7 +16,8 @@ const detectAffiliateLinks = () => {
     cuebic: "cuebic.co.jp/your_select/link/",
     ekichica: "ekichica.com/media/_click/",
     rakuten: "https://hb.afl.rakuten.co.jp/",
-    google: "https://googleads"
+    google: "https://googleads",
+    amazon: "https://amzn.to/"
   }
   const aAllelements = document.querySelectorAll("a")
   const aElements = []
