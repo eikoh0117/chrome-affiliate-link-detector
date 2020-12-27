@@ -14,7 +14,8 @@ const detectAffiliateLinks = () => {
     bannerBridge: "track.bannerbridge.net/click.php?",
     affiliencer: "https://s5.aspservice.jp/affiliencer/link.php?",
     cuebic: "cuebic.co.jp/your_select/link/",
-    ekichica: "ekichica.com/media/_click/"
+    ekichica: "ekichica.com/media/_click/",
+    rakuten: "https://hb.afl.rakuten.co.jp/"
   }
   const aAllelements = document.querySelectorAll("a")
   const aElements = []
