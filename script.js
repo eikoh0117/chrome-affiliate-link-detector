@@ -10,7 +10,8 @@ const detectAffiliateLinks = () => {
     presco: "ad.presco.asia/cl/?b_id=",
     linkA: "link-a.net/gate.php?guid=",
     affiTown: "ad.atown.jp/cp?sid=",
-    doubleClick: "adclick.g.doubleclick.net/"
+    doubleClick: "adclick.g.doubleclick.net/",
+    bannerBridge: "track.bannerbridge.net/click.php?"
   }
   const aAllelements = document.querySelectorAll("a")
   const aElements = []
