@@ -12,7 +12,8 @@ const detectAffiliateLinks = () => {
     affiTown: "ad.atown.jp/cp?sid=",
     doubleClick: "adclick.g.doubleclick.net/",
     bannerBridge: "track.bannerbridge.net/click.php?",
-    affiliencer: "https://s5.aspservice.jp/affiliencer/link.php?"
+    affiliencer: "https://s5.aspservice.jp/affiliencer/link.php?",
+    cuebic: "cuebic.co.jp/your_select/link/"
   }
   const aAllelements = document.querySelectorAll("a")
   const aElements = []
