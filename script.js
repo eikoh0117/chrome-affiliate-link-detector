@@ -11,7 +11,8 @@ const detectAffiliateLinks = () => {
     linkA: "link-a.net/gate.php?guid=",
     affiTown: "ad.atown.jp/cp?sid=",
     doubleClick: "adclick.g.doubleclick.net/",
-    bannerBridge: "track.bannerbridge.net/click.php?"
+    bannerBridge: "track.bannerbridge.net/click.php?",
+    affiliencer: "https://s5.aspservice.jp/affiliencer/link.php?"
   }
   const aAllelements = document.querySelectorAll("a")
   const aElements = []
