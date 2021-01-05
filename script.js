@@ -17,7 +17,8 @@ const detectAffiliateLinks = () => {
     ekichica: "ekichica.com/media/_click/",
     rakuten: "https://hb.afl.rakuten.co.jp/",
     google: "https://googleads",
-    amazon: "https://amzn.to/"
+    amazon: "https://amzn.to/",
+    trafficgate: "https://ad2.trafficgate.net/"
   }
   const aAllelements = document.querySelectorAll("a")
   const aElements = []
